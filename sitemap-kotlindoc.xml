@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>com/globalkit/microapps/login/configuration</loc>
+        <lastmod>2019-05-14T17:45:04.698</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>com/globalkit/microapps/login/configuration/LoginService</loc>
+        <lastmod>2019-05-14T17:45:04.694</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>com/globalkit/microapps/login/configuration/LoginFactory</loc>
+        <lastmod>2019-05-14T17:45:04.695</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>com/globalkit/microapps/login/core/domain</loc>
+        <lastmod>2019-05-14T17:45:04.699</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>com/globalkit/microapps/login/core/domain/TokenData</loc>
+        <lastmod>2019-05-14T17:45:04.695</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>

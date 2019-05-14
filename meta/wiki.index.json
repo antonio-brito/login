@@ -1,0 +1,199 @@
+{
+  "ownKey": "wiki",
+  "childrenPages": {"wiki": {
+    "ownKey": "wiki",
+    "childrenPages": {
+      "features": {
+        "ownKey": "features",
+        "childrenPages": {
+          "one": {
+            "ownKey": "one",
+            "ownPages": [{
+              "reference": {
+                "path": "wiki/features",
+                "baseUrl": "",
+                "fileName": "one",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/features/one"
+              },
+              "next": {
+                "path": "wiki/features",
+                "baseUrl": "",
+                "fileName": "two",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/features/two"
+              },
+              "previous": {
+                "path": "wiki",
+                "baseUrl": "",
+                "fileName": "features",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/features"
+              },
+              "description": "",
+              "title": "Feature One",
+              "content": ""
+            }]
+          },
+          "two": {
+            "ownKey": "two",
+            "ownPages": [{
+              "reference": {
+                "path": "wiki/features",
+                "baseUrl": "",
+                "fileName": "two",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/features/two"
+              },
+              "next": {
+                "path": "wiki",
+                "baseUrl": "",
+                "fileName": "extending",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/extending"
+              },
+              "previous": {
+                "path": "wiki/features",
+                "baseUrl": "",
+                "fileName": "one",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "wiki/features/one"
+              },
+              "description": "",
+              "title": "Feature Two",
+              "content": ""
+            }]
+          }
+        },
+        "ownPages": [{
+          "reference": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "features",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/features"
+          },
+          "next": {
+            "path": "wiki/features",
+            "baseUrl": "",
+            "fileName": "one",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/features/one"
+          },
+          "previous": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "configuration",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/configuration"
+          },
+          "description": "",
+          "title": "Features",
+          "content": ""
+        }]
+      },
+      "configuration": {
+        "ownKey": "configuration",
+        "ownPages": [{
+          "reference": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "configuration",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/configuration"
+          },
+          "next": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "features",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/features"
+          },
+          "previous": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "installation",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/installation"
+          },
+          "description": "",
+          "title": "Basic Configuration",
+          "content": ""
+        }]
+      },
+      "installation": {
+        "ownKey": "installation",
+        "ownPages": [{
+          "reference": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "installation",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/installation"
+          },
+          "next": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "configuration",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/configuration"
+          },
+          "description": "",
+          "title": "Installation",
+          "content": ""
+        }]
+      },
+      "extending": {
+        "ownKey": "extending",
+        "ownPages": [{
+          "reference": {
+            "path": "wiki",
+            "baseUrl": "",
+            "fileName": "extending",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/extending"
+          },
+          "previous": {
+            "path": "wiki/features",
+            "baseUrl": "",
+            "fileName": "two",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "wiki/features/two"
+          },
+          "description": "",
+          "title": "Extending",
+          "content": ""
+        }]
+      }
+    },
+    "ownPages": [{
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "wiki",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "wiki"
+      },
+      "description": "",
+      "title": "Wiki",
+      "content": "<html>\n <head><\/head>\n <body>\n  <ul> \n   <li><a href=\"wiki/installation\">Installation<\/a><\/li> \n   <li><a href=\"wiki/configuration\">Basic Configuration<\/a><\/li> \n   <li><a href=\"wiki/features\">Features<\/a> \n    <ul> \n     <li><a href=\"wiki/features/one\">Feature One<\/a><\/li> \n     <li><a href=\"wiki/features/two\">Feature Two<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"wiki/extending\">Extending<\/a><\/li> \n  <\/ul> \n <\/body>\n<\/html>\n"
+    }]
+  }}
+}

@@ -1,0 +1,31 @@
+{
+  "ownKey": "home",
+  "ownPages": [
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": ""
+      },
+      "description": "",
+      "title": "Global MicroApps Login",
+      "content": "<h1 id=\"global-microapps-login\">Global MicroApps Login<\/h1>\n"
+    },
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "404",
+        "extension": "html",
+        "usePrettyUrl": false,
+        "link": "404.html"
+      },
+      "description": "",
+      "title": "Global MicroApps Login",
+      "content": ""
+    }
+  ]
+}

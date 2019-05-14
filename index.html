@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.8"/>
+<link rel="icon" href="favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Global MicroApps Login</title>
+
+
+<meta name="description" content="Documentacion del proyecto Global MicroApps Login">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.8","baseUrl":"","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: frontPage -->
+<!-- Class: com.eden.orchid.api.theme.pages.OrchidPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: frontPage, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
+<!-- Source Filename: homepage.md -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"","baseUrl":"","fileName":"","extension":"html","usePrettyUrl":true,"link":""},"description":"","title":"Global MicroApps Login"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/orchidSearch.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="" class="logo">Global MicroApps Login</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://pkgs.dev.azure.com/dedgeglobal/_packaging/SDK-Snapshot/maven/v1" class="icon fa-file-code-o">
+                <span class="label">Repository</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Global MicroApps Login</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <h1 id="global-microapps-login">Global MicroApps Login</h1>
+
+                    
+                
+            
+        
+            
+                
+                    
+                        <div class="component component-readme component-order-0">
+                            <h2 id="introduction">Introduction</h2>
+<p>This api implements a client to connect with a service that you can use to</p>
+<ul>
+<li>Authenticate and get an access token</li>
+<li>Get the user info of a jwt token</li>
+<li>Get an access token</li>
+<li>Change the password if you are authenticated</li>
+<li>Ask for a code if you forgot your password that your going to receive in your email</li>
+<li>Confirm your code an set your new password</li>
+<li>Create a new user to be used in the application</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To use the Login API we need that the follow apis were initializad</p>
+<ul>
+<li>GlobalKit_MicroApps_AppManagement</li>
+<li>GlobalKit_MicroApps_Bus</li>
+</ul>
+<p>After that we need to initialize the service in the bus with this method.
+LoginFactory.initLoginServiceFactory()</p>
+<h2 id="examples">Examples</h2>
+<h3 id="login">Login</h3>
+<pre><code class="language-kotlin">/* If you want to authenticate you can send a message to the bus like this */
+
+Bus.publishAsync(&quot;login&quot;, RequestMessage(parameters = &quot;&quot;{&quot;username&quot;:&quot;juanito.perez@dedge.global&quot;,&quot;password&quot;:&quot;ValidPassword&quot;}&quot;&quot;&quot;,id = &quot;1&quot;))!!
+    .subscribe(
+        AllObserver(
+            {
+                println(&quot;onNext...........&quot;)
+                    when(it.isSuccess){
+                        true -&gt; {
+                            val token: TokenDataChild = Json.parse(TokenDataChild.serializer(), it.result!!)
+                            println(token.accessToken)
+                        }
+                        false -&gt;{
+                            println(&quot;${it.error.toString()}&quot;)
+                        }
+                    }
+            },
+            {println(&quot;onError...........&quot;)},
+            {println(&quot;onComplete...........&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<p>If you try to login after create a user, the first time you try to login you will get an exception with the message 'You need to update your password'. then you need to login like the next example</p>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;login&quot;, RequestMessage(parameters = &quot;&quot;{&quot;username&quot;:&quot;juanito.perez@dedge.global&quot;,&quot;password&quot;:&quot;ValidPassword&quot;,&quot;newPassword&quot;:&quot;AValidNewPassword&quot;}&quot;&quot;&quot;,id = &quot;1&quot;))!!
+    .subscribe(
+        AllObserver(
+            {
+                println(&quot;onNext...........&quot;)
+                    when(it.isSuccess){
+                        true -&gt; {
+                            val token: TokenDataChild = Json.parse(TokenDataChild.serializer(), it.result!!)
+                            println(token.accessToken)
+                        }
+                        false -&gt;{
+                            println(&quot;${it.error.toString()}&quot;)
+                        }
+                    }
+            },
+            {println(&quot;onError...........&quot;)},
+            {println(&quot;onComplete...........&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="getuserinfo">getUserInfo</h3>
+<p>To use this method you need to be authenticated</p>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;getUserInfo&quot;, RequestMessage(id = &quot;2&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {result -&gt; println(&quot;Answer getUserInfo:${result}&quot;)},
+            {e -&gt; print(&quot;ErrorInGetUserInfo:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="gettoken">getToken</h3>
+<p>To use this method you need to be authenticated</p>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;getToken&quot;, RequestMessage(id = &quot;3&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            { result -&gt; println(&quot;Answer getToken:${result}&quot;) },
+            { e -&gt; print(&quot;ErrorInGetToken:${e.message}&quot;) }
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="forgotpassword">forgotPassword</h3>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;forgotPassword&quot;, RequestMessage(id = &quot;4&quot;, parameters = &quot;&quot;&quot;{&quot;username&quot;:&quot;juanito.perez@dedge.global&quot;}&quot;&quot;&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {it -&gt; println(&quot;Answer forgotPassword:${it}&quot;)
+                when(it.isSuccess){
+                    true -&gt; {
+                        val forgotPasswordResponseChild: ForgotPasswordResponseChild = Json.parse(ForgotPasswordResponseChild.serializer(), it.result!!)
+                        println(forgotPasswordResponseChild.name)
+                    }
+                    false -&gt;{
+                        println(&quot;${it.error.toString()}&quot;)
+                    }
+                }
+            },
+            {e -&gt; print(&quot;ErrorInForgotPassword:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="confirmforgotpassword">confirmForgotPassword</h3>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;confirmForgotPassword&quot;, RequestMessage(id = &quot;4&quot;, parameters = &quot;&quot;&quot;{&quot;username&quot;:&quot;juanito.perez@dedge.global&quot;,&quot;confirmationCode&quot;:&quot;429107&quot;,&quot;password&quot;:&quot;ValidPassword&quot;}&quot;&quot;&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {it -&gt; println(&quot;Answer confirmForgotPassword:${it}&quot;)
+                when(it.isSuccess){
+                    true -&gt; {
+                        println(it.result!!)
+                    }
+                    false -&gt;{
+                        println(&quot;${it.error.toString()}&quot;)
+                    }
+                }
+            },
+            {e -&gt; print(&quot;ErrorInConfirmForgotPassword:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="changepassword">changePassword</h3>
+<p>To use this method you need to be authenticated</p>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;changePassword&quot;, RequestMessage(id = &quot;4&quot;, parameters = &quot;&quot;&quot;{&quot;previousPassword&quot;:&quot;oldPassword&quot;,&quot;newPassword&quot;:&quot;newPassword&quot;}&quot;&quot;&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {it -&gt; println(&quot;Answer changePassword:${it}&quot;)
+                when(it.isSuccess){
+                    true -&gt; {
+                        println(it.result!!)
+                    }
+                    false -&gt;{
+                        println(&quot;${it.error.toString()}&quot;)
+                    }
+                }
+            },
+            {e -&gt; print(&quot;ErrorInChangePassword:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="createuser">createUser</h3>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;createUser&quot;, RequestMessage(id = &quot;7&quot;, parameters = &quot;&quot;&quot;{&quot;name&quot;:&quot;Juan Perez Lopez&quot;,&quot;emailAddress&quot;:&quot;juanito.perez@gmail.com&quot;,&quot;phoneNumber&quot;:&quot;+520000000000&quot;}&quot;&quot;&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {it -&gt; println(&quot;Answer createUser:${it}&quot;)
+                when(it.isSuccess){
+                    true -&gt; {
+                        println(it.result!!)
+                    }
+                    false -&gt;{
+                        println(&quot;${it.error.toString()}&quot;)
+                    }
+                }
+            },
+            {e -&gt; print(&quot;ErrorInCreateUser:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+<h3 id="logout">logout</h3>
+<pre><code class="language-kotlin">Bus.publishAsync(&quot;logout&quot;, RequestMessage(id = &quot;7&quot;))!!
+    .subscribe(
+        NextTerminalObserver(
+            {it -&gt; println(&quot;Answer logout:${it}&quot;)
+                when(it.isSuccess){
+                    true -&gt; {
+                        println(it.result!!)
+                    }
+                    false -&gt;{
+                        println(&quot;${it.error.toString()}&quot;)
+                    }
+                }
+            },
+        {e -&gt; print(&quot;ErrorInLogout:${e.message}&quot;)}
+        )
+    )
+
+    // This is just to show the result
+    Thread.sleep(3000L)
+</code></pre>
+
+                        </div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Login</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="wiki/installation">Installation</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="wiki/configuration">Basic Configuration</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Features</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="wiki/features/one">Feature One</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="wiki/features/two">Feature Two</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="wiki/extending">Extending</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration">com.globalkit.microapps.login.configuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/core/domain">com.globalkit.microapps.login.core.domain</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration/LoginFactory">LoginFactory</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration/LoginService">LoginService</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/core/domain/TokenData">TokenData</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_util.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_main.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="Editorial/5a97b030/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

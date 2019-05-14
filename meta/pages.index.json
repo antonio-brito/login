@@ -1,0 +1,19 @@
+{
+  "ownKey": "pages",
+  "childrenPages": {"changelog": {
+    "ownKey": "changelog",
+    "ownPages": [{
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "changelog",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "changelog"
+      },
+      "description": "",
+      "title": "Changelog",
+      "content": ""
+    }]
+  }}
+}

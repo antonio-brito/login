@@ -1,0 +1,344 @@
+{
+  "ownKey": "internal",
+  "childrenPages": {
+    "com": {
+      "ownKey": "com",
+      "childrenPages": {"globalkit": {
+        "ownKey": "globalkit",
+        "childrenPages": {"microapps": {
+          "ownKey": "microapps",
+          "childrenPages": {"login": {
+            "ownKey": "login",
+            "childrenPages": {
+              "core": {
+                "ownKey": "core",
+                "childrenPages": {"domain": {
+                  "ownKey": "domain",
+                  "childrenPages": {"TokenData": {
+                    "ownKey": "TokenData",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/globalkit/microapps/login/core/domain",
+                        "baseUrl": "",
+                        "fileName": "TokenData",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "com/globalkit/microapps/login/core/domain/TokenData"
+                      },
+                      "description": "",
+                      "title": "TokenData",
+                      "content": "<p>accessToken<\/p>\n<p>expiresIn<\/p>\n<p>idToken<\/p>\n<p>refreshToken<\/p>\n<p>tokenType<\/p>\n"
+                    }]
+                  }},
+                  "ownPages": [{
+                    "reference": {
+                      "path": "com/globalkit/microapps/login/core",
+                      "baseUrl": "",
+                      "fileName": "domain",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "com/globalkit/microapps/login/core/domain"
+                    },
+                    "description": "",
+                    "title": "com.globalkit.microapps.login.core.domain",
+                    "content": ""
+                  }]
+                }}
+              },
+              "configuration": {
+                "ownKey": "configuration",
+                "childrenPages": {
+                  "LoginFactory": {
+                    "ownKey": "LoginFactory",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/globalkit/microapps/login/configuration",
+                        "baseUrl": "",
+                        "fileName": "LoginFactory",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "com/globalkit/microapps/login/configuration/LoginFactory"
+                      },
+                      "description": "",
+                      "title": "LoginFactory",
+                      "content": "<p>A Factory that initialize the services or provide an instance of LoginService to be use.<\/p>\n<p>getLoginService\nA function that provide an instance of LoginService\ninitLoginServiceFactory\nThe method that initialize the services to be used in the event bus.\nThe services are login, getUserInfo, getToken, changePassword forgotPassword, confirmForgotPassword and createUser<\/p>\n"
+                    }]
+                  },
+                  "LoginService": {
+                    "ownKey": "LoginService",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/globalkit/microapps/login/configuration",
+                        "baseUrl": "",
+                        "fileName": "LoginService",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "com/globalkit/microapps/login/configuration/LoginService"
+                      },
+                      "description": "",
+                      "title": "LoginService",
+                      "content": "<p>The LoginService class is the main enter point for use the services of the package.<init>\nThe LoginService class is the main enter point for use the services of the package.<\/p>\n<p>login\nUse this method to authenticate an user\ngetUserInfo\nUse this method to get the user info in the token\ngetToken\nUse this method to get the access token\nchangePassword\nUse this method to change the password if you are authenticated\nforgotPassword\nUse this method to send a code to the user email to change the password\nconfirmForgotPassword\nUse this method to change the password if you have the code sended by forgotPassword method\ncreateUser\nUse this method to create a user\nlogout\nUse this method to logout<\/p>\n"
+                    }]
+                  }
+                },
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/globalkit/microapps/login",
+                    "baseUrl": "",
+                    "fileName": "configuration",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "com/globalkit/microapps/login/configuration"
+                  },
+                  "description": "",
+                  "title": "com.globalkit.microapps.login.configuration",
+                  "content": ""
+                }]
+              }
+            }
+          }}
+        }}
+      }}
+    },
+    "wiki": {
+      "ownKey": "wiki",
+      "childrenPages": {
+        "features": {
+          "ownKey": "features",
+          "childrenPages": {
+            "one": {
+              "ownKey": "one",
+              "ownPages": [{
+                "reference": {
+                  "path": "wiki/features",
+                  "baseUrl": "",
+                  "fileName": "one",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/features/one"
+                },
+                "next": {
+                  "path": "wiki/features",
+                  "baseUrl": "",
+                  "fileName": "two",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/features/two"
+                },
+                "previous": {
+                  "path": "wiki",
+                  "baseUrl": "",
+                  "fileName": "features",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/features"
+                },
+                "description": "",
+                "title": "Feature One",
+                "content": ""
+              }]
+            },
+            "two": {
+              "ownKey": "two",
+              "ownPages": [{
+                "reference": {
+                  "path": "wiki/features",
+                  "baseUrl": "",
+                  "fileName": "two",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/features/two"
+                },
+                "next": {
+                  "path": "wiki",
+                  "baseUrl": "",
+                  "fileName": "extending",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/extending"
+                },
+                "previous": {
+                  "path": "wiki/features",
+                  "baseUrl": "",
+                  "fileName": "one",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "wiki/features/one"
+                },
+                "description": "",
+                "title": "Feature Two",
+                "content": ""
+              }]
+            }
+          },
+          "ownPages": [{
+            "reference": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "features",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/features"
+            },
+            "next": {
+              "path": "wiki/features",
+              "baseUrl": "",
+              "fileName": "one",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/features/one"
+            },
+            "previous": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "configuration",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/configuration"
+            },
+            "description": "",
+            "title": "Features",
+            "content": ""
+          }]
+        },
+        "configuration": {
+          "ownKey": "configuration",
+          "ownPages": [{
+            "reference": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "configuration",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/configuration"
+            },
+            "next": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "features",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/features"
+            },
+            "previous": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "installation",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/installation"
+            },
+            "description": "",
+            "title": "Basic Configuration",
+            "content": ""
+          }]
+        },
+        "installation": {
+          "ownKey": "installation",
+          "ownPages": [{
+            "reference": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "installation",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/installation"
+            },
+            "next": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "configuration",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/configuration"
+            },
+            "description": "",
+            "title": "Installation",
+            "content": ""
+          }]
+        },
+        "extending": {
+          "ownKey": "extending",
+          "ownPages": [{
+            "reference": {
+              "path": "wiki",
+              "baseUrl": "",
+              "fileName": "extending",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/extending"
+            },
+            "previous": {
+              "path": "wiki/features",
+              "baseUrl": "",
+              "fileName": "two",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "wiki/features/two"
+            },
+            "description": "",
+            "title": "Extending",
+            "content": ""
+          }]
+        }
+      },
+      "ownPages": [{
+        "reference": {
+          "path": "",
+          "baseUrl": "",
+          "fileName": "wiki",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "wiki"
+        },
+        "description": "",
+        "title": "Wiki",
+        "content": "<html>\n <head><\/head>\n <body>\n  <ul> \n   <li><a href=\"wiki/installation\">Installation<\/a><\/li> \n   <li><a href=\"wiki/configuration\">Basic Configuration<\/a><\/li> \n   <li><a href=\"wiki/features\">Features<\/a> \n    <ul> \n     <li><a href=\"wiki/features/one\">Feature One<\/a><\/li> \n     <li><a href=\"wiki/features/two\">Feature Two<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"wiki/extending\">Extending<\/a><\/li> \n  <\/ul> \n <\/body>\n<\/html>\n"
+      }]
+    },
+    "changelog": {
+      "ownKey": "changelog",
+      "ownPages": [{
+        "reference": {
+          "path": "",
+          "baseUrl": "",
+          "fileName": "changelog",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "changelog"
+        },
+        "description": "",
+        "title": "Changelog",
+        "content": ""
+      }]
+    }
+  },
+  "ownPages": [
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": ""
+      },
+      "description": "",
+      "title": "Global MicroApps Login",
+      "content": "<h1 id=\"global-microapps-login\">Global MicroApps Login<\/h1>\n"
+    },
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "",
+        "fileName": "404",
+        "extension": "html",
+        "usePrettyUrl": false,
+        "link": "404.html"
+      },
+      "description": "",
+      "title": "Global MicroApps Login",
+      "content": ""
+    }
+  ]
+}

@@ -1,0 +1,843 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.8"/>
+<link rel="icon" href="favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>LoginService</title>
+
+
+<meta name="description" content="Documentacion del proyecto Global MicroApps Login">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.8","baseUrl":"","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: kotlindocClass -->
+<!-- Class: com.eden.orchid.kotlindoc.page.KotlindocClassPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
+<!-- Source Filename: com/globalkit/microapps/login/configuration/LoginService.html -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"com/globalkit/microapps/login/configuration","baseUrl":"","fileName":"LoginService","extension":"html","usePrettyUrl":true,"link":"com/globalkit/microapps/login/configuration/LoginService"},"description":"","title":"LoginService"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="Editorial/5a97b030/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/orchidKotlindoc.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="" class="logo">Global MicroApps Login</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://pkgs.dev.azure.com/dedgeglobal/_packaging/SDK-Snapshot/maven/v1" class="icon fa-file-code-o">
+                <span class="label">Repository</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>LoginService</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="com/globalkit/microapps/login/configuration">com.globalkit.microapps.login.configuration</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+        class com.globalkit.microapps.login.configuration.LoginService
+    </code>
+</p>
+<div class="class-description" id="description">
+<p>The LoginService class is the main enter point for use the services of the package.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__constructor__">
+        <code>
+        constructor()
+        </code>
+    </div>
+    <div class="panel-body"><p>The LoginService class is the main enter point for use the services of the package.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+</div>
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_login_data__String____ERROR_CLASS_">
+        <code>
+        fun login(data: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to authenticate an user</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        data: String
+        </code>
+        
+            <br><br>
+            <div><p>A json with username, password and newPassword is optional</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String of json with the token data</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_getUserInfo_____ERROR_CLASS_">
+        <code>
+        fun getUserInfo(): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to get the user info in the token</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String in json format with the user info</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_getToken_____ERROR_CLASS_">
+        <code>
+        fun getToken(): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to get the access token</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String of the accessToken</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_changePassword_data__String____ERROR_CLASS_">
+        <code>
+        fun changePassword(data: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to change the password if you are authenticated</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        data: String
+        </code>
+        
+            <br><br>
+            <div><p>String in json format with previousPassword and newPassword</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String that confirms that the password was changed</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_forgotPassword_data__String____ERROR_CLASS_">
+        <code>
+        fun forgotPassword(data: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to send a code to the user email to change the password</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        data: String
+        </code>
+        
+            <br><br>
+            <div><p>String in json format with the username</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String in json format that contains name, deliveryMedium and destination</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_confirmForgotPassword_data__String____ERROR_CLASS_">
+        <code>
+        fun confirmForgotPassword(data: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to change the password if you have the code sended by forgotPassword method</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        data: String
+        </code>
+        
+            <br><br>
+            <div><p>String in json format with the username, confirmationCode and password</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String that confirms that the password was changed</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_createUser_data__String____ERROR_CLASS_">
+        <code>
+        fun createUser(data: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to create a user</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        data: String
+        </code>
+        
+            <br><br>
+            <div><p>String in json format with the name, emailAddress and phoneNumber</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String in json format that contains userName, temporalPassword and emailAddress</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_logout_____ERROR_CLASS_">
+        <code>
+        fun logout(): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Use this method to logout</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>String in json format with the boolean success</p>
+</div>
+</div>
+
+</div>
+
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Login</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="wiki/installation">Installation</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="wiki/configuration">Basic Configuration</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Features</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="wiki/features/one">Feature One</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="wiki/features/two">Feature Two</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="wiki/extending">Extending</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration">com.globalkit.microapps.login.configuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/core/domain">com.globalkit.microapps.login.core.domain</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration/LoginFactory">LoginFactory</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/configuration/LoginService">LoginService</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="com/globalkit/microapps/login/core/domain/TokenData">TokenData</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>LoginService</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="#summary">Summary</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="#description">Description</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Constructors</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#constructor__constructor__">constructor()</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Methods</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#method__fun_login_data__String____ERROR_CLASS_">fun login(data: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_getUserInfo_____ERROR_CLASS_">fun getUserInfo(): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_getToken_____ERROR_CLASS_">fun getToken(): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_changePassword_data__String____ERROR_CLASS_">fun changePassword(data: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_forgotPassword_data__String____ERROR_CLASS_">fun forgotPassword(data: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_confirmForgotPassword_data__String____ERROR_CLASS_">fun confirmForgotPassword(data: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_createUser_data__String____ERROR_CLASS_">fun createUser(data: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_logout_____ERROR_CLASS_">fun logout(): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_util.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_main.js"></script>
+<script src="Editorial/5a97b030/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="Editorial/5a97b030/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"com": {
+    "ownKey": "com",
+    "childrenPages": {"globalkit": {
+      "ownKey": "globalkit",
+      "childrenPages": {"microapps": {
+        "ownKey": "microapps",
+        "childrenPages": {"login": {
+          "ownKey": "login",
+          "childrenPages": {
+            "core": {
+              "ownKey": "core",
+              "childrenPages": {"domain": {
+                "ownKey": "domain",
+                "childrenPages": {"TokenData": {
+                  "ownKey": "TokenData",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "com/globalkit/microapps/login/core/domain",
+                      "baseUrl": "",
+                      "fileName": "TokenData",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "com/globalkit/microapps/login/core/domain/TokenData"
+                    },
+                    "description": "",
+                    "title": "TokenData",
+                    "content": "<p>accessToken<\/p>\n<p>expiresIn<\/p>\n<p>idToken<\/p>\n<p>refreshToken<\/p>\n<p>tokenType<\/p>\n"
+                  }]
+                }},
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/globalkit/microapps/login/core",
+                    "baseUrl": "",
+                    "fileName": "domain",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "com/globalkit/microapps/login/core/domain"
+                  },
+                  "description": "",
+                  "title": "com.globalkit.microapps.login.core.domain",
+                  "content": ""
+                }]
+              }}
+            },
+            "configuration": {
+              "ownKey": "configuration",
+              "childrenPages": {
+                "LoginFactory": {
+                  "ownKey": "LoginFactory",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "com/globalkit/microapps/login/configuration",
+                      "baseUrl": "",
+                      "fileName": "LoginFactory",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "com/globalkit/microapps/login/configuration/LoginFactory"
+                    },
+                    "description": "",
+                    "title": "LoginFactory",
+                    "content": "<p>A Factory that initialize the services or provide an instance of LoginService to be use.<\/p>\n<p>getLoginService\nA function that provide an instance of LoginService\ninitLoginServiceFactory\nThe method that initialize the services to be used in the event bus.\nThe services are login, getUserInfo, getToken, changePassword forgotPassword, confirmForgotPassword and createUser<\/p>\n"
+                  }]
+                },
+                "LoginService": {
+                  "ownKey": "LoginService",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "com/globalkit/microapps/login/configuration",
+                      "baseUrl": "",
+                      "fileName": "LoginService",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "com/globalkit/microapps/login/configuration/LoginService"
+                    },
+                    "description": "",
+                    "title": "LoginService",
+                    "content": "<p>The LoginService class is the main enter point for use the services of the package.<init>\nThe LoginService class is the main enter point for use the services of the package.<\/p>\n<p>login\nUse this method to authenticate an user\ngetUserInfo\nUse this method to get the user info in the token\ngetToken\nUse this method to get the access token\nchangePassword\nUse this method to change the password if you are authenticated\nforgotPassword\nUse this method to send a code to the user email to change the password\nconfirmForgotPassword\nUse this method to change the password if you have the code sended by forgotPassword method\ncreateUser\nUse this method to create a user\nlogout\nUse this method to logout<\/p>\n"
+                  }]
+                }
+              },
+              "ownPages": [{
+                "reference": {
+                  "path": "com/globalkit/microapps/login",
+                  "baseUrl": "",
+                  "fileName": "configuration",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "com/globalkit/microapps/login/configuration"
+                },
+                "description": "",
+                "title": "com.globalkit.microapps.login.configuration",
+                "content": ""
+              }]
+            }
+          }
+        }}
+      }}
+    }}
+  }}
+}
